@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="shortcut icon" href="https://cdn.discordapp.com/emojis/727728679085408317.png" type="image/x-icon">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: monospace;
+        }
+
+        body {
+            background: #ffffa6;
+        }
+
+        .logo {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            height: 75px;
+            width: calc(100% - 40px);
+            max-width: 280px;
+            border: 5px solid #f39e4a;
+            line-height: 65px;
+            padding: 0 25px;
+            color: #f39e4a;
+            text-decoration: none;
+            font-family: monospace;
+            /* font-size: 1em; */
+            font-weight: bolder;
+            transition: all 0.4s ease-in-out;
+        }
+
+        .logo h1::last-letter {
+            margin-left: -5px
+        }
+
+        .logo img {
+            height: 65px;
+        }
+
+        .logo:hover {
+            color:#ffffa6;
+            background:#f39e4a;
+        }
+
+        .logo:hover + .name {
+            opacity: 1;
+        }
+
+        .message {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            font-size: 22px;
+            font-weight: bolder;
+            text-transform: uppercase;
+        }
+        
+
+        .trigger {
+            width: 100px;
+            height: 100px;
+            background: transparent;
+            display: block;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 999;
+        }
+
+        .trigger:hover + .peek {
+            left: -100%;
+        }
+
+        .peek {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 75px;
+            width: 75px;
+            transition: all 0.4s ease-in-out;
+        }
+        
+        .name {
+            position: fixed;
+            font-size: 10vw;
+            text-transform: uppercase;
+            font-weight: bolder;
+            top: 50%;
+            left: 50%;
+            white-space: nowrap;
+            transform: translate(-50%, -50%) rotate(-40deg);
+            opacity: 0.3;
+            color:#f39e4a;
+            transition: all 0.4s ease-in-out;
+        }
+
+        @media screen and (max-width: 850px) {
+            .name {
+                font-size: 85px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="/" class="logo">
+        <span><img src="https://cdn.discordapp.com/emojis/727728679085408317.png" alt=""></span> <h1>EHMED GA?<span style="margin-left: -7px;">!</span></h1>
+    </a>
+    <p class="name">Ahmad Shahzad</p>
+    <pre class="message">
+        Lookin for watcha?
+        Doing here watcha?
+        Found watcha want?
+        Or lost still'cha?</pre>
+    <span class="trigger"></span>
+    <img src="https://cdn.discordapp.com/attachments/727460028394766402/731801038897545287/OwO_1.png" alt="" class="peek">
+</body>
+</html>
